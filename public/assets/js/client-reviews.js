@@ -1,0 +1,14 @@
+
+// Popup Open
+function popupOpen(x){
+    video_src = document.getElementById(x).value;
+    document.getElementById("video-frame").src = video_src;
+    document.getElementById("popup").style.display="block";
+    document.getElementById("overlay").style.display="block";
+	}
+// Popup Close
+	function popupClose(){
+        document.getElementById("video-frame").src = '';
+    document.getElementById("popup").style.display="none";
+    document.getElementById("overlay").style.display="none";
+	} 

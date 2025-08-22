@@ -1,0 +1,52 @@
+.privacy-1-flex {
+    position: relative;
+    padding-block: 0 40px;
+}
+.privacy-h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    width: fit-content;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(-90deg,#7a541f 0,#ebb447 100%) 1;
+    margin-block: 30px 50px;
+    margin-inline: auto;
+}
+.privacy-p {
+  color: rgba(153, 153, 153, 1);
+  font-size: 16px;
+  text-align: center;
+  line-height: 20px;
+}
+.privacy-head {
+  font-style: normal;
+  font-size: 28px;
+  line-height: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.privacy-details {
+    text-decoration: none;
+    color: #e1a651;
+}
+
+@media screen and (max-width: 991px) {
+  .privacy-head {
+    font-size: 28px;
+    line-height: 36px;
+    text-align: left;
+  }
+  .section-1-flex {
+    display: block;
+  }
+  .privacy-p {
+    text-align: left;
+    line-height: 22px;
+  }
+}

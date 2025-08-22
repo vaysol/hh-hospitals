@@ -1,0 +1,49 @@
+<?php namespace App\Models\Admin;
+
+use CodeIgniter\Model;
+
+class Gallery_Model extends Model {
+
+    public $db, $session, $model;
+
+    function __construct() {
+        $this->db = \Config\Database::connect();
+        $this->session = \Config\Services::session();
+    }
+
+    public function getGallery() {
+       $this->builder = $this->db->table( 'gallery' );
+       $this->builder->select( '*' );
+        $query =$this->builder->get()->getResultArray();
+        return $query;
+    }
+
+    public function getGalleryById( $id ) {
+        $builder = $this->db->table( 'gallery' );
+        $builder->where( 'id', $id );
+        return $builder->get()->getResultArray();
+    }
+
+    public function insertGallery( $data ) {
+        $this->builder = $this->db->table( 'gallery' );
+        $query = $this->builder->insert( $data );
+        return $this->db->insertID();
+    }
+
+    public function updateGallery( $data, $id ) {
+        $this->builder = $this->db->table( 'gallery' );
+        $this->builder->where( 'id', $id );
+        $query = $this->builder->update( $data );
+        return $query;
+    }
+
+    public function deleteGallery( $id ) {
+        $builder = $this->db->table( 'gallery' );
+        $builder->where( 'id', $id );
+        $query = $builder->delete();
+        return $query;
+    }
+}
+
+// echo  $this->db->getLastQuery();
+// exit;

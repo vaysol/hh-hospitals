@@ -1,0 +1,172 @@
+.blogs-list-main {
+    position: relative;
+}
+.blogs-heading-main {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    width: fit-content;
+    border-bottom: 2px solid transparent;
+    border-image: linear-gradient(-90deg, #7a541f 0, #ebb447 100%) 1;
+    margin-block: 30px 50px;
+    margin-inline: auto;
+}
+.bloglist-holder {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 30px 20px;
+    box-sizing: border-box;
+    margin-block: 10px 40px;
+}
+.bloglist-items {
+    position: relative;
+    cursor: pointer;
+    transition: 0.4s all;
+}
+.bloglist-items:hover .bloglist-content {
+    box-shadow: 2px 2px 30px -8px #ebeae9;
+    transition: 0.4s all;
+}
+.bloglist-items:hover,
+.bloglist-items:active {
+    transition: 0.4s all;
+    transform: scale(1.05) !important;
+}
+.bloglist-imageholder {
+    overflow: hidden;
+    position: relative;
+    height: 300px;
+    box-sizing: border-box;
+    z-index: 5;
+}
+img.bloglist-img {
+    object-fit: cover;
+    object-position: center;
+    box-sizing: border-box;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+}
+.bloglist-content {
+    padding-block: 10px 15px;
+    padding-inline: 10px 10px;
+    box-sizing: border-box;
+    display: block;
+}
+.bloglist-subheader {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #141414;
+    margin-block: 0 10px;
+    -webkit-line-clamp: 2;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    height: 55px;
+}
+.bloglist-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.2;
+    color: #999999;
+    margin-block: 0 10px;
+    -webkit-line-clamp: 5;
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+    height: 100px;
+}
+.arrow-btn-holder {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding-block: 0 0px;
+}
+.arrow-knowmore {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 18px;
+    position: relative;
+    padding-inline: 0px 0px;
+    padding-block: 10px 10px;
+    margin-inline: 0;
+    border-radius: 3px;
+    transition: 0.4s ease all;
+    text-transform: uppercase;
+    background: linear-gradient(90deg, #875f26 30%, #e4bb49 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.arrow-knowmore:hover {
+    background: linear-gradient(90deg, #e4bb49 30%, #875f26 78%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: 0.4s ease all;
+}
+.arrow-knowmore .arrowspan-right-chevron {
+    color: #875f26;
+}
+.blog-dateholder {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 2px solid #ffffff;
+    padding: 10px;
+    background-color: #99999940;
+}
+.date-month {
+    font-size: 14px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #ffffff;
+    margin-block: 0 5px;
+}
+.date-day {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #ffffff;
+    margin-block: 0;
+}
+@media only screen and (min-device-width: 1200px) and (max-device-width: 1350px) {
+}
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1199px) {
+}
+@media only screen and (min-device-width: 992px) and (max-device-width: 1024px) {
+    .bloglist-holder {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+@media only screen and (min-device-width: 769px) and (max-device-width: 991px) {
+}
+@media only screen and (max-width: 768px) {
+    .bloglist-holder {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .blogs-heading-main {
+        font-size: 32px;
+        margin-block: 25px 40px;
+    }
+}
+@media only screen and (max-width: 767px) {
+}
+@media only screen and (max-width: 550px) {
+    .bloglist-holder {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+@media only screen and (max-width: 375px) {
+}

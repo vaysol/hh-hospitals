@@ -1,0 +1,88 @@
+/*people carousel starts*/
+.people-carousel{
+    width: 100%;
+    position: relative;
+    height: 110px;
+    box-sizing: border-box;
+    max-width: 1360px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.people-carousel:hover .people-carousel-control{
+    transition: 0.5s ease all;
+    display: block;
+}
+.people-carousel:active .people-carousel-control{
+    transition: 0.5s ease all;
+    display: block;
+}
+.people-carousel-content{
+    height: 100%;
+    position: relative;
+    overflow : hidden;
+    transition: width .4s;
+}
+.people-carousel-slide{
+    height: 100%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: left .4s cubic-bezier(.47, .13, .15, .89);
+}
+.people-carousel-slide-card {
+    width: 97%;
+    height: 80%;
+    transition: transform 1s;
+    position: relative;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+.homepeople-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    max-height: 320px;
+}
+.home-people-details {
+    position: relative;
+    padding: 10px 40px;
+}
+.people-name {
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1;
+    margin: 0;
+    color: #141414;
+    text-align: center;
+}
+.people-position {
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: center;
+    color: #a1a1a1;
+    margin-block: 8px;
+}
+.people-carousel-img{
+    max-width:100%;
+    height:auto;
+    object-fit: contain;
+}
+.people-card{
+    position: absolute;
+    width: 96%;
+    margin: 0 auto;
+    min-height: 100px;
+    padding: 11px;
+    background: #fff;
+    margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    box-sizing: border-box;
+}
+/*media query for carousel*/
